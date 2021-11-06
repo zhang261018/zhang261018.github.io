@@ -1,0 +1,71 @@
+.screen-block {
+    height:100%;
+    background-position-x: center;
+    background-size: 100% auto;
+}
+
+.black-mask {
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    transition: all 1s ease;
+    color: white;
+}
+
+.black-mask:hover {
+    background-color: rgba(0,0,0,0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-shadow: 0px 0px 10px white;
+}
+
+.description {
+    font-size: large;
+    color: lightgray;
+    text-align: center;
+}
+
+#block0 {
+    background-image: url('https://gss0.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/18d8bc3eb13533fa28d951cda6d3fd1f40345be2.jpg');
+}
+
+#block1 {
+    background-image: url('http://5b0988e595225.cdn.sohucs.com/images/20171220/0dabc0ab692a4a1ea49c809475107654.jpeg');
+}
+
+#block2 {
+    background-image: url('https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/1c950a7b02087bf42e9a93d4fcd3572c11dfcf9d.jpg');
+}
+
+#block3 {
+    background-image: url('https://up.enterdesk.com/edpic_source/e3/d3/cc/e3d3cc7778dcbe940a8918a5d3d59926.jpg');
+}
+
+#block4 {
+    background-image: url('http://news.yunnan.cn/pic/003/031/892/00303189257_59ae1094.jpg');
+}
+
+#backbtn {
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotateZ(45deg);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: transparent;
+}
+
+hr {
+    border: none;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid white;
+    opacity: .70;
+}

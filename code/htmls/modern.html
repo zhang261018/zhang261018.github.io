@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="screen-block">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../css/modern.css" rel="stylesheet"/>
+    <title>近现代</title>
+  </head>
+  <body class="screen-block">
+    <div id="block0" class="screen-block">
+      <div class="black-mask">
+        <h1 class="display-1">1997/07/01</h1>
+        <span></span>
+        <h1>香港回归</h1>
+        <hr/>
+        <p class="description">
+          1982年9月，英国政府与中华人民共和国政府开始就香港前途问题展开谈判。
+          经过两年多达22轮的谈判，最终在1984年12月19日正式签署了《中英联合声明》，
+          决定从1997年7月1日起，中国在香港成立特别行政区，开始对香港岛、界限街以南的九龙半岛、
+          新界等土地重新行使主权和治权。1997年7月1日零点整，香港回归。
+        </p>
+      </div>
+    </div>
+    <div id="block1" class="screen-block">
+      <div class="black-mask">
+        <h1 class="display-1">1999/12/20</h1>
+        <span></span>
+        <h1>澳门回归</h1>
+        <hr/>
+        <p class="description">
+          1987年4月13日，中葡两国政府签订了《中华人民共和国政府和葡萄牙共和国政府关于澳门问题的联合声明》，
+          宣布澳门地区(包括澳门半岛、凼仔岛和路环岛)是中国的领土，中华人民共和国于1999年12月20日对澳门恢复行使主权。
+          1999年12月20日零点整，澳门回归。
+        </p>
+      </div>
+    </div>
+    <div id="block2" class="screen-block">
+      <div class="black-mask">
+        <h1 class="display-1">2008/08/08</h1>
+        <span></span>
+        <h1>北京奥运会</h1>
+        <hr/>
+        <p class="description">
+          1998年11月25日，北京递交申请举办2008年奥运会的申请书。1999年4月7日，国际奥委会正式接受北京的申奥申请。
+          2008年3月24日，希腊赫拉神庙遗址，北京奥运会圣火取火成功。
+          7月27日，位于奥林匹克公园内的奥运村开村。8月8日，点燃北京奥运会主火炬，奥运会开幕。
+          2008年北京奥运会共创造43项新世界纪录及132项新奥运纪录，共有87个国家和地区在赛事中取得奖牌，
+          中国以51枚金牌居金牌榜首名，是奥运历史上首个登上金牌榜首的亚洲国家。
+        </p>
+      </div>
+    </div>
+    <div id="block3" class="screen-block">
+      <div class="black-mask">
+        <h1 class="display-1">2010/05/10</h1>
+        <span></span>
+        <h1>上海世博会</h1>
+        <hr/>
+        <p class="description">
+          1999年12月，在国际展览局第126次全体大会上，中国政府正式宣布申办2010年世博会。
+          2002年12月3日，经国际展览局大会投票表决，中国获得2010年世博会举办权。
+          本次世博会也是由中国举办的首届注册类世界博览会，主题为：城市，让生活更美好。
+          2010年5月1日，中国上海世界博览会开幕。
+        </p>
+      </div>
+    </div>
+    <div id="block4" class="screen-block">
+      <div class="black-mask">
+        <h1 class="display-1">2020/10/26</h1>
+        <span></span>
+        <h1>十九届五中全会</h1>
+        <hr/>
+        <p class="description">
+          2020年10月26日至29日，中国共产党第十九届中央委员会第五次全体会议在北京举行。
+          全会听取和讨论了习近平总书记受中央政治局委托作的工作报告。
+          全会审议通过了《中共中央关于制定国民经济和社会发展第十四个五年规划和二〇三五年远景目标的建议》，
+          号召全党全国各族人民要紧密团结在以习近平同志为核心的党中央周围，同心同德，顽强奋斗，夺取全面建设社会主义现代化国家新胜利!
+        </p>
+      </div>
+      <a href="TotalPages.html" id="backbtn">B</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      window.onscroll = function(evt) {
+        for(let i = 0; i < 5; i ++) {
+          let element = document.getElementById("block" + i)
+          element.style = "background-position-y : " + (-0.5*scrollTop(element)) + "px;"
+        }
+      }
+
+      function scrollTop(element) {
+        return element.offsetTop - window.scrollY
+      }
+    </script>
+  </body>
+</html>

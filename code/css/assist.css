@@ -1,0 +1,88 @@
+#body {
+    background-image: url('https://n.sinaimg.cn/mil/transform/771/w516h255/20201012/0289-kakmcxe0123680.png');
+    background-position-x: center;
+    background-size: auto 110%;
+}
+
+.black-mask {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+    animation: anim-blur 3s ease 0s infinite alternate both;
+    color: white;
+}
+
+@keyframes anim-blur {
+    from {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    to {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(0,0,0,0.6);
+    }
+}
+
+.section-block {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: large;
+    color: lightgray;
+}
+
+.section-img {
+    flex: 0 0 auto;
+    width: 400px;
+    height: auto;
+    transition: all 0.5s ease;
+    border: 1px solid white;
+    box-shadow: 0 0 5px 0px white;
+}
+
+.section-img:hover {
+    box-shadow: 0 0 15px 5px white;
+}
+
+.section-desc {
+    flex: 1 1 200px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    text-shadow: 0px 0px 0px white;
+}
+
+.section-desc:hover {
+    text-shadow: 0px 0px 10px white;
+}
+
+#backbtn {
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transform: rotateZ(45deg);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: transparent;
+}
+
+hr {
+    border: none;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid white;
+    opacity: .70;
+}

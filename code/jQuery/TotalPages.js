@@ -1,81 +1,85 @@
 var currentPage = 0;
 
+function stop() {
+    return false;
+}
+document.oncontextmenu = stop;
+
 $(document).ready(
-    function(){
+    function() {
     $(document).on("mousewheel DOMMouseScroll", function (e) {
         let delta = (e.originalEvent.wheelDelta && (e.originalEvent.wheelDelta > 0 ? 1 : -1)) ||
             (e.originalEvent.detail && (e.originalEvent.detail > 0 ? -1 : 1));
         if (delta > 0 && currentPage == 1) {
-            $("#div4").fadeOut(500);
-            $("#div3").fadeOut(1000);
-            $("#div2").fadeOut(2000);
-            $("#div1").fadeOut(2500);
+            disapper();
             currentPage = 0;
         }
 
         else if(delta > 0 && currentPage == 2) {
             $("#timeLine").slideUp(500);
-            $("#div1").fadeIn(1000);
-            $("#div2").fadeIn(1500);
-            $("#div3").fadeIn(2000);
-            $("#div4").fadeIn(2500);
+            emerege();
             currentPage = 1;
         }
 
         else if(delta < 0 && currentPage == 1) {
-            $("#div4").fadeOut(500);
-            $("#div3").fadeOut(1000);
-            $("#div2").fadeOut(2000);
-            $("#div1").fadeOut(2500);
+            disapper();
             $("#timeLine").slideDown(3000);
             currentPage = 2;
         }
 
         else if (delta < 0 && currentPage == 0) {
-            $("#div1").fadeIn();
-            $("#div2").fadeIn(1000);
-            $("#div3").fadeIn(2000);
-            $("#div4").fadeIn(2500);
+            emerege();
             currentPage = 1;
         }
     });
 
     $(document).bind("mousedown",function(e){
         if(e.which == 1 && currentPage == 0) {
-            $("#div1").fadeIn();
-            $("#div2").fadeIn(1000);
-            $("#div3").fadeIn(2000);
-            $("#div4").fadeIn(2500);
+            emerege();
             currentPage = 1;
         }
         else if(e.which == 1 && currentPage == 1) {
-            $("#div4").fadeOut(500);
-            $("#div3").fadeOut(1000);
-            $("#div2").fadeOut(2000);
-            $("#div1").fadeOut(2500);
+            disapper();
             $("#timeLine").slideDown("slow");
             currentPage = 2;
         }
         else if(e.which == 3 && currentPage == 1) {
-            $("#div4").fadeOut(500);
-            $("#div3").fadeOut(1000);
-            $("#div2").fadeOut(2000);
-            $("#div1").fadeOut(2500);
+            disapper();
             currentPage = 0;
         }
         else if(e.which == 3 && currentPage == 2) {
             $("#timeLine").slideUp("slow");
-            $("#div1").fadeIn();
-            $("#div2").fadeIn(1000);
-            $("#div3").fadeIn(2000);
-            $("#div4").fadeIn(2500);
+            emerege();
             currentPage = 1;
         }
     });
 
+    $("h2").hover(
+        function() {
+            $("h2").scale(1.2);
+        },
+        function() {
+            $("h2").scale(0.8);
+        }
+    );
+
         var timelines = $('.cd-horizontal-timeline'),
             eventsMinDistance = 30;
         (timelines.length > 0) && initTimeline(timelines);
+
+        function emerege() {
+            $("#div1").fadeIn(1000);
+            $("#div2").fadeIn(1500);
+            $("#div3").fadeIn(2000);
+            $("#div4").fadeIn(2500);
+        }
+
+        function disapper() {
+            $("#div4").fadeOut(500);
+            $("#div3").fadeOut(1000);
+            $("#div2").fadeOut(2000);
+            $("#div1").fadeOut(2500);
+        }
 
         function initTimeline(timelines) {
             timelines.each(function(){
