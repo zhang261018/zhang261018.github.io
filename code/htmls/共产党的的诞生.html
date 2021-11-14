@@ -253,7 +253,31 @@
             }
         }
 
+        #backbtn {
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+            transform: rotateZ(45deg);
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: transparent;
+            transition: all 0.5s ease;
+        }
 
+        #backbtn:hover{
+            transform: scale(1.2);
+            animation: 0.6s linear 0s 1 normal forwards shake;
+        }
+
+        @keyframes shake {
+            0% { transform: scale(1.2) rotateZ(45deg); }
+            25% { transform: scale(1.2) rotateZ(55deg); }
+            50% {transform: scale(1.2) rotateZ(45deg);}
+            75% { transform: scale(1.2) rotateZ(35deg); }
+            100% { transform: scale(1.2) rotateZ(45deg); }
+        }
     </style>
 </head>
 <body>
@@ -329,9 +353,7 @@
     <!--page1-->
     
     <div id="page-intro" class="gap" style="background-image:url(../../images/birth/paint.jpeg); ">
-        <div>
-            <img src="../../images/birth/左箭头.png" onclick="location.href='TotalPages.html'" style="width:55px;justify-content: start;">
-        </div>
+        <span id="backbtn"></span>
         <h1>中国共产党的诞生</h1>
     </div>
 
