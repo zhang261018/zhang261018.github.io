@@ -1,3 +1,7 @@
+body{
+    user-select: none;
+}
+
 #timeLine{
     position:absolute;
     top:0px;
